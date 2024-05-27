@@ -7,6 +7,8 @@
     <meta name="keywords" content="Curriculum, Curriculum Vitae, CV, Resume, Personal Information">
     <meta name="description" content="Curriculum Vitae of a person">
     <meta name="author" content="Michael Estrada">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
 </head>
 
 <body>
@@ -22,6 +24,7 @@
             <li><a href="#section2">Habilidades</a></li>
             <li><a href="#section3">Experiencia</a></li>
             <li><a href="#section4">Proyectos</a></li>
+            <li><a href="#section5">Contacto</a></li>
         </ul>
     </nav>
 
@@ -29,7 +32,7 @@
         <h2 id="section1">Educación</h2>
         <h3>Escuela Superior Politécnica del Litoral (ESPOL)</h3>
         <p>Estudiante de Computación</p>
-        <p>Oct 2021 ‑ Presente (Guayaquil, EC)</p>
+        <span>Oct 2021 ‑ Presente (Guayaquil, EC)</span>
         <ul>
             <li>Grupo de Investigación de Tecnologías Web, Móviles y Ciencias de Datos (TAWS) miembro activo</li>
             <li>Club de Software Libre (KOKOA) miembro activo</li>
@@ -37,40 +40,50 @@
     </section>
 
     <section>
-        <section>
-            <h2 id="section2">Habilidades</h2>
-            <h3>Tools</h3>
-            <ul>
-                <li>Python, Java, C, MySQL, PostgreSQL, JavaScript, TypeScript, Linux</li>
-            </ul>
-            <h3>General</h3>
-            <ul>
-                <li>Git, Microsoft office, LaTeX, Figma</li>
-            </ul>
-            <h3>Personal</h3>
-            <ul>
-                <li>Autodidacta, trabajo en equipo, liderazgo, pensamiento creativo</li>
-            </ul>
-        </section>
+        <h2 id="section2">Habilidades</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoría</th>
+                    <th>Habilidades</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Tools</th>
+                    <td>Python, Java, C, MySQL, PostgreSQL, JavaScript, TypeScript, Linux</td>
+                </tr>
+                <tr>
+                    <th>General</th>
+                    <td>Git, Microsoft office, LaTeX, Figma</td>
+                </tr>
+                <tr>
+                    <th>Personal</th>
+                    <td>Autodidacta, trabajo en equipo, liderazgo, pensamiento creativo</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
         <h2 id="section3">Experiencia</h2>
         <h3>AYUDANTE DE INVESTIGACIÓN</h3>
         <h4>Ayudante de Investigación en Ciencias de la Tierra</h4>
-        <p>May 2023 – Presente (Guayaquil, EC)</p>
+        <span>May 2023 – Presente (Guayaquil, EC)</span>
         <ul>
-            <li>Colaboro con el Profesor Andrés Velástegui en un proyecto de investigación para mapear piscinas camaroneras en manglares mediante Machine Learning.</li>
+            <li>Colaboro con el Profesor Andrés Velástegui en un proyecto de investigación para mapear piscinas
+                camaroneras en manglares mediante Machine Learning.</li>
         </ul>
         <h3>DISEÑADOR DE INTERFAZ DE USUARIO</h3>
         <h4>Pasantías Pre Profesionales - Zede del Litoral</h4>
-        <p>Sep 2023 – En 2024 (Guayaquil, EC)</p>
+        <span>Sep 2023 – En 2024 (Guayaquil, EC)</span>
         <ul>
-            <li>Desarrollo prototipos de Figma de baja, media y alta fidelidad para interfaces de usuario atractivas e interactivas.</li>
+            <li>Desarrollo prototipos de Figma de baja, media y alta fidelidad para interfaces de usuario atractivas e
+                interactivas.</li>
         </ul>
-        <h3>PASANTE DE BUSINESS INTELLIGNENCE</h3>
-        <h4>Pasantías de business intelligence en Vitapro</h4>
-        <p>En 2024 – Presente (Guayaquil, EC)</p>
+        <h3>PASANTE DE BUSINESS INTELLIGENCE</h3>
+        <h4>Pasantías de business intelligence - Vitapro</h4>
+        <span>En 2024 – Presente (Guayaquil, EC)</span>
         <ul>
             <li>Reportes de avance de ventas.</li>
             <li>Administración de las bases de datos.</li>
@@ -79,15 +92,40 @@
     </section>
 
     <section>
+
         <h2 id="section4">Proyectos</h2>
-        <h3>RIDE! (Pyweekend 9na. Edición)</h3>
-        <p>Optimización del sistema de préstamo de bicicletas con reconocimiento facial de Azure.</p>
-        <h3>DIABETES ML (TAWS club en ESPOL)</h3>
-        <p>Identificación de diabetes mediante aprendizaje automático.</p>
+
+        <div>
+            <h3>RIDE! (Pyweekend 9na. Edición)</h3>
+            <p>Optimización del sistema de préstamo de bicicletas con reconocimiento facial de Azure.</p>
+            <h3>DIABETES ML (TAWS club en ESPOL)</h3>
+            <p>Identificación de diabetes mediante aprendizaje automático.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 id="section4">Contáctame</h2>
+        <form id="formulario">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required="required"><br>
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required="required"><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" required="required"></textarea><br>
+            <button type="submit" name="enviar">Enviar</button> <button type="reset" name="reiniciar">Cancelar</button>
+        </form>
     </section>
 
     <footer>
-        <!-- Contenido del pie de página -->
+        <center>
+            <p>© 2024 Michael Estrada. Todos los derechos reservados.
+                Contacto: micbryestrada2003@gmail.com
+                Sígueme en:
+                <a href="https://www.linkedin.com/in/maiestrada/" target="_blank">LinkedIn</a>,
+                <a href="https://github.com/bryanestrada003" target="_blank">GitHub</a>
+            </p>
+        </center>
+
     </footer>
 </body>
 
