@@ -13,6 +13,8 @@ header {
   padding: 10px 0;
 }
 
+
+
 header h1 {
   margin: 0;
 }
@@ -57,6 +59,7 @@ td {
 }
 
 footer {
+  display: flex;
   background-color: #333;
   color: #fff;
   text-align: center;
@@ -72,44 +75,94 @@ img {
 
 #general {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* divide el grid en dos columnas */
-  grid-template-rows: auto auto; /* divide el grid en dos filas */
+  grid-template-columns: 1fr 1fr;
+  /* divide el grid en dos columnas */
+  grid-template-rows: auto;
+  /* divide el grid en dos filas */
+}
+
+/* Estilos para pantallas con un ancho máximo de 600px */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+    /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  header {
+    padding: 5px 5px;
+    /* Ajusta el padding del header para pantallas pequeñas */
+  }
+
+  #general {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* divide el grid en dos filas */
+  }
+
+  .video {
+    width: 50%;
+    padding: 5px;
+    order: 1;
+    /* hace que el video ocupe dos filas */
+  }
+  
+  .educacion {
+    order: 2;
+  }
+  
+  .habilidades {
+    order: 3;
+  }
 }
 
 .video {
   padding: 5px;
-  grid-row: 1 / 3; /* hace que el video ocupe dos filas */
+  grid-row: 1 / 3;
+  /* hace que el video ocupe dos filas */
 }
 
 .educacion {
-  grid-row: 1; /* hace que la sección de educación ocupe la primera fila */
+  grid-row: 1;
+  /* hace que la sección de educación ocupe la primera fila */
 }
 
 .habilidades {
-  grid-row: 2; /* hace que la sección de habilidades ocupe la segunda fila */
+  grid-row: 2;
+  /* hace que la sección de habilidades ocupe la segunda fila */
 }
 
 .contacto-mapa {
-  display: flex; /* Hace que los elementos hijos se alineen en una fila */
-  justify-content: space-between; /* Añade espacio entre los elementos */
+  display: flex;
+  /* Hace que los elementos hijos se alineen en una fila */
+  justify-content: space-between;
+  /* Añade espacio entre los elementos */
 }
 
 iframe {
   width: 100%;
   height: auto;
 }
-form, iframe {
-  flex: 1; /* Hace que los elementos hijos se expandan para ocupar todo el espacio disponible */
+
+form,
+iframe {
+  flex: 1;
+  /* Hace que los elementos hijos se expandan para ocupar todo el espacio disponible */
   margin: 10px;
 }
 
 .contenedor {
-  display: flex; /* Hace que los elementos hijos se alineen en una fila */
-  justify-content: space-between; /* Añade espacio entre los elementos */
+  display: flex;
+  /* Hace que los elementos hijos se alineen en una fila */
+  justify-content: space-between;
+  /* Añade espacio entre los elementos */
 }
 
 .cuadro {
-  border: 1px solid #000; /* Añade un borde alrededor de cada cuadro */
-  padding: 10px; /* Añade un poco de espacio alrededor del contenido de cada cuadro */
-  width: 30%; /* Ajusta el ancho de cada cuadro */
+  border: 1px solid #000;
+  /* Añade un borde alrededor de cada cuadro */
+  padding: 10px;
+  /* Añade un poco de espacio alrededor del contenido de cada cuadro */
+  width: 30%;
+  /* Ajusta el ancho de cada cuadro */
 }
