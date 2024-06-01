@@ -18,20 +18,23 @@
         </center>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#section1">Educación</a></li>
-            <li><a href="#section2">Habilidades</a></li>
-            <li><a href="#section3">Experiencia</a></li>
-            <li><a href="#section4">Proyectos</a></li>
-            <li><a href="#section5">Contacto</a></li>
-        </ul>
-    </nav>
+    <left>
+        <nav>
+            <ul>
+                <li><a href="#section1">Educación</a></li>
+                <li><a href="#section2">Habilidades</a></li>
+                <li><a href="#section3">Experiencia</a></li>
+                <li><a href="#section4">Proyectos</a></li>
+                <li><a href="#section5">Contacto</a></li>
+            </ul>
+        </nav>
+    </left>
+
     <div id="general">
-        <video class = "video" controls="yes">
+        <video class="video" controls="yes">
             <source src="curriculum.mp4" type="video/mp4">
         </video>
-        <section class = "educacion">
+        <section class="educacion">
             <h2 id="section1">Educación</h2>
             <h3>Escuela Superior Politécnica del Litoral (ESPOL)</h3>
             <p>Estudiante de Computación</p>
@@ -42,7 +45,7 @@
             </ul>
         </section>
 
-        <section class = "habilidades">
+        <section class="habilidades">
             <h2 id="section2">Habilidades</h2>
             <table>
                 <thead>
@@ -71,60 +74,86 @@
 
     <section>
         <h2 id="section3">Experiencia</h2>
-        <h3>AYUDANTE DE INVESTIGACIÓN</h3>
-        <h4>Ayudante de Investigación en Ciencias de la Tierra</h4>
-        <span>May 2023 – Presente (Guayaquil, EC)</span>
-        <ul>
-            <li>Colaboro con el Profesor Andrés Velástegui en un proyecto de investigación para mapear piscinas
-                camaroneras en manglares mediante Machine Learning.</li>
-        </ul>
-        <h3>DISEÑADOR DE INTERFAZ DE USUARIO</h3>
-        <h4>Pasantías Pre Profesionales - Zede del Litoral</h4>
-        <span>Sep 2023 – En 2024 (Guayaquil, EC)</span>
-        <ul>
-            <li>Desarrollo prototipos de Figma de baja, media y alta fidelidad para interfaces de usuario atractivas e
-                interactivas.</li>
-        </ul>
-        <h3>PASANTE DE BUSINESS INTELLIGENCE</h3>
-        <h4>Pasantías de business intelligence - Vitapro</h4>
-        <span>En 2024 – Presente (Guayaquil, EC)</span>
-        <ul>
-            <li>Reportes de avance de ventas.</li>
-            <li>Administración de las bases de datos.</li>
-            <li>Automatización de procesos.</li>
-        </ul>
+        <div class="contenedor">
+            <div class="cuadro">
+                <h3>PASANTE DE BUSINESS INTELLIGENCE</h3>
+                <h4>Pasantías de business intelligence - Vitapro</h4>
+                <span>En 2024 – Presente (Guayaquil, EC)</span>
+                <ul>
+                    <li>Reportes de avance de ventas.</li>
+                    <li>Administración de las bases de datos.</li>
+                    <li>Automatización de procesos.</li>
+                </ul>
+            </div>
+
+            <div class="cuadro">
+                <h3>DISEÑADOR DE INTERFAZ DE USUARIO</h3>
+                <h4>Pasantías Pre Profesionales - Zede del Litoral</h4>
+                <span>Sep 2023 – En 2024 (Guayaquil, EC)</span>
+                <ul>
+                    <li>Desarrollo prototipos de Figma de baja, media y alta fidelidad para interfaces de usuario atractivas e interactivas.</li>
+                </ul>
+            </div>
+
+            <div class="cuadro">
+                <h3>AYUDANTE DE INVESTIGACIÓN</h3>
+                <h4>Ayudante de Investigación en Ciencias de la Tierra</h4>
+                <span>May 2023 – Dec 2023 (Guayaquil, EC)</span>
+                <ul>
+                    <li>Colaboro con el Profesor Andrés Velástegui en un proyecto de investigación para mapear piscinas camaroneras en manglares mediante Machine Learning.</li>
+                </ul>
+            </div>           
+        </div>
     </section>
 
     <section>
-
         <h2 id="section4">Proyectos</h2>
-        <div>
-            <h3>RIDE! (Pyweekend 9na. Edición)</h3>
-            <img src="Pyweekend.jpeg" alt="RIDE!">
-            <p>Optimización del sistema de préstamo de bicicletas con reconocimiento facial de Azure.</p>
+        <div class="contenedor"> 
+            <div class = "cuadro">
+                <center>
+                    <img src="Pyweekend.jpeg" alt="RIDE!">
+                </center>                 
+                <h3>RIDE! (Pyweekend 9na. Edición)</h3>
+                <p>Optimización del sistema de préstamo de bicicletas con reconocimiento facial de Azure.</p>
+            </div>
+            <div class="cuadro">
+                <center>
+                    <img src="DiabetesML.jpeg" alt="DIABETES ML">
+                </center>
+                <h3>DIABETES ML (TAWS club en ESPOL)</h3>
+                <p>Identificación de diabetes mediante aprendizaje automático.</p>
+            </div>
+            <div class="cuadro">
+                <center>
+                    <img src="psychopy.jpeg" alt="DIABETES ML">
+                </center>
+                <h3> <a href="https://github.com/BryanEstrada003/PsychoPy-Project.git" target="_blank">PsychoPy</a> (Build With AI)</h3>
+                <p>Solución que agiliza el proceso de búsqueda de consultores usando Gemini AI.</p>
+            </div>
+            
         </div>
-        <div>
-            <h3>DIABETES ML (TAWS club en ESPOL)</h3>
-            <p>Identificación de diabetes mediante aprendizaje automático.</p>
-        </div>
+        
     </section>
 
-    <section>
-        <h2 id="section5">Contáctame</h2>
-        <form id="formulario">
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" required="required"><br>
-            <label for="email">Correo electrónico:</label><br>
-            <input type="email" id="email" name="email" required="required"><br>
-            <label for="message">Mensaje:</label><br>
-            <textarea id="message" name="message" required="required"></textarea><br>
-            <button type="submit" name="enviar">Enviar</button> <button type="reset" name="reiniciar">Cancelar</button>
-        </form>
-    </section>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127584.51450030041!2d-80.04697183567608!3d-2.1475304351033766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1716782474152!5m2!1ses-419!2sec"
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="contacto-mapa">
+        <section>
+            <h2 id="section5">Contáctame</h2>
+            <form id="formulario">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" required="required"><br>
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email" required="required"><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" required="required"></textarea><br>
+                <button type="submit" name="enviar">Enviar</button> <button type="reset"
+                    name="reiniciar">Cancelar</button>
+            </form>
+        </section>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127584.51450030041!2d-80.04697183567608!3d-2.1475304351033766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1716782474152!5m2!1ses-419!2sec"
+            style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
 
     <footer>
         <center>
