@@ -1,168 +1,180 @@
-/* stylesheets/style.css */
-
+/* General styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 header {
-  background-color: #333;
-  color: #ffffff;
-  padding: 10px 0;
+  background-color: #fff;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6;
 }
-
-
 
 header h1 {
   margin: 0;
+  font-size: 2em;
 }
 
 nav {
-  background-color: #ddd;
-  padding: 10px 5px;
-  text-align: left;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #dee2e6;
+  text-align: center;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333;
+  font-weight: bold;
 }
 
 section {
-  margin: 20px 5px;
+  margin: 20px auto;
   padding: 20px;
   background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 1200px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
-table,
-th,
-td {
-  border: 1px solid #ddd;
+th, td {
+  border: 1px solid #dee2e6;
   padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f9fa;
 }
 
 footer {
-  display: flex;
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
   text-align: center;
-  padding: 10px 0;
-  bottom: 0;
-  width: 100%;
+  border-top: 1px solid #dee2e6;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  border-radius: 5px;
+}
+
+video {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .contenedor {
+    flex-direction: column;
+  }
+
+  .cuadro {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #general {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cuadro {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  width: 32%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 #general {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* divide el grid en dos columnas */
-  grid-template-rows: auto;
-  /* divide el grid en dos filas */
-}
-
-/* Estilos para pantallas con un ancho máximo de 600px */
-@media (max-width: 600px) {
-  body {
-    font-size: 18px;
-    /* Ajusta el tamaño de la fuente para pantallas pequeñas */
-  }
-
-  header {
-    padding: 5px 5px;
-    /* Ajusta el padding del header para pantallas pequeñas */
-  }
-
-  #general {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    /* divide el grid en dos filas */
-  }
-
-  .video {
-    width: 50%;
-    padding: 5px;
-    order: 1;
-    /* hace que el video ocupe dos filas */
-  }
-  
-  .educacion {
-    order: 2;
-  }
-  
-  .habilidades {
-    order: 3;
-  }
+  grid-template-rows: auto auto;
+  gap: 20px;
 }
 
 .video {
-  padding: 5px;
+  grid-column: 1 / 2;
   grid-row: 1 / 3;
-  /* hace que el video ocupe dos filas */
 }
 
 .educacion {
-  grid-row: 1;
-  /* hace que la sección de educación ocupe la primera fila */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 
 .habilidades {
-  grid-row: 2;
-  /* hace que la sección de habilidades ocupe la segunda fila */
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
-.contacto-mapa {
-  display: flex;
-  /* Hace que los elementos hijos se alineen en una fila */
+#contacto-mapa {
+  display: flex; /* Hace que los elementos hijos se alineen en una fila */
   justify-content: space-between;
-  /* Añade espacio entre los elementos */
+  gap: 20px;
 }
 
-iframe {
-  width: 100%;
-  height: auto;
+#contacto-mapa form {
+  flex-direction: column; /* Cambia la dirección del flex a columna */
 }
 
-form,
-iframe {
-  flex: 1;
-  /* Hace que los elementos hijos se expandan para ocupar todo el espacio disponible */
-  margin: 10px;
-}
-
-.contenedor {
-  display: flex;
-  /* Hace que los elementos hijos se alineen en una fila */
-  justify-content: space-between;
-  /* Añade espacio entre los elementos */
-}
-
-.cuadro {
-  border: 1px solid #000;
-  /* Añade un borde alrededor de cada cuadro */
-  padding: 10px;
-  /* Añade un poco de espacio alrededor del contenido de cada cuadro */
-  width: 30%;
-  /* Ajusta el ancho de cada cuadro */
+#contacto-mapa form, #contacto-mapa iframe {
+  flex: 1; /* Hace que los elementos hijos se expandan para ocupar todo el espacio disponible */
 }
