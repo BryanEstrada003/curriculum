@@ -50,7 +50,7 @@ section {
   padding: 20px;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
 }
 
@@ -60,7 +60,8 @@ table {
   margin-top: 20px;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #dee2e6;
   padding: 10px;
   text-align: left;
@@ -68,6 +69,10 @@ th, td {
 
 th {
   background-color: #f8f9fa;
+}
+
+td {
+  background-color: #f2f3f3;
 }
 
 footer {
@@ -129,18 +134,17 @@ video {
 
 .contenedor {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-.cuadro {
-  background-color: #fff;
+#cuadro {
   padding: 20px;
-  margin: 10px 0;
+  margin: 5px 0;
   border: 1px solid #dee2e6;
   border-radius: 5px;
-  width: 32%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 25%;
 }
 
 #general {
@@ -166,15 +170,76 @@ video {
 }
 
 #contacto-mapa {
-  display: flex; /* Hace que los elementos hijos se alineen en una fila */
+  display: flex;
+  /* Hace que los elementos hijos se alineen en una fila */
   justify-content: space-between;
-  gap: 20px;
 }
 
 #contacto-mapa form {
-  flex-direction: column; /* Cambia la dirección del flex a columna */
+  flex-direction: column;
+  /* Cambia la dirección del flex a columna */
 }
 
-#contacto-mapa form, #contacto-mapa iframe {
-  flex: 1; /* Hace que los elementos hijos se expandan para ocupar todo el espacio disponible */
+#contacto-mapa form,
+#contacto-mapa iframe {
+  flex: 1;
+  /* Hace que los elementos hijos se expandan para ocupar todo el espacio disponible */
+}
+
+.educacion:hover,
+.habilidades:hover {
+  background-color: #04859c;
+  /* Cambia el color de fondo al pasar el mouse */
+}
+
+.educacion:hover {
+  color: #fafafa;
+  /* Cambia el color de la letra al pasar el mouse */
+
+}
+
+.habilidades:hover h2 {
+  color: #fafafa; /* Cambia el color del h2 al pasar el mouse sobre .habilidades */
+}
+
+.bi:hover {
+  background-color: #e62e2e;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: #fafafa;
+  /* Cambia el color de la letra al pasar el mouse */
+}
+
+.ui:hover {
+  background-color: #cabd00;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: #fafafa;
+  /* Cambia el color de la letra al pasar el mouse */
+}
+
+.research:hover {
+  background-color: #199c1f;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: #fafafa;
+  /* Cambia el color de la letra al pasar el mouse */
+}
+
+.ride:hover {
+  background-color: #e62e2e;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: #fafafa;
+  /* Cambia el color de la letra al pasar el mouse */
+}
+
+.diabetes:hover {
+  background-color: #cabd00;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: #fafafa;
+  /* Cambia el color de la letra al pasar el mouse */
+}
+
+.psychopy:hover {
+  background-color: #199c1f;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: #fafafa;
+  /* Cambia el color de la letra al pasar el mouse */
 }
